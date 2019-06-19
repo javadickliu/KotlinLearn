@@ -1,8 +1,10 @@
 package com.example.kotlinlearn
 
+import android.annotation.TargetApi
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,7 +13,7 @@ import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 
-
+val Pii=3.13
 class MainActivity : AppCompatActivity() {
     //    var int = 4
 //    var intVar :Int?=4
@@ -19,8 +21,10 @@ class MainActivity : AppCompatActivity() {
 //    var buttn2 :Button= Button(this)
 //    var double = 0.4
 //    val outVar : Int=4
-    val string: String? = null  //todo Kotlin成员变量初始化的时候
-
+    val string: String? =null//todo Kotlin成员变量初始化的时候
+  //     get() = ""
+     //  set(value) =
+    @TargetApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -54,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         // TestKotlinClass.testBoolean
 
         //=====遍历for==
-       // forTest()
+        // forTest()
 
 
 //
@@ -70,7 +74,36 @@ class MainActivity : AppCompatActivity() {
 //        val largeValue = 100_0000_1000
         // largeValue.to
 
-        whenUse(1)
+        //  whenUse(1)
+
+//        //==Kotlin list集合的定义和遍历==
+//        val list1= listOf<String>("A","B","C","D")//
+//        val list2= listOf("A","B","C","D")
+//        listof
+//         //todo 还有几种方法
+////        list1.add()//不可变list没有提供改变和操作集合的方法,比如add,remove,clear
+////        list1.remove()//
+//
+//        for(index in list1){//for循环遍历 list集合
+//            Log.d(TAG, "" + index)
+//        }
+//
+       val mutableList1= mutableListOf<String>("E","F","G","H")
+        mutableList1.add("I")
+        mutableList1.removeAt(0)
+        for(index in mutableList1.indices){//for循环遍历 MutableList集合
+            Log.d(TAG, "" + index)
+        }
+
+        //==Kotlin map集合的定义和遍历==
+        val map1 = mapOf<Int, String>(1 to "d", 4 to "5")
+        val map2 = mapOf(1 to "d", 4 to "5")
+        val mutableMap1 = mutableMapOf<Int, String>(1 to "d", 4 to "5")
+        val mutableMap2 = mutableMapOf(1 to "d", 4 to "5")
+        map1.forEach { key, value ->
+            Log.d(TAG, "key" + key + " value=" + value)
+        }
+
     }
 
 
