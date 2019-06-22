@@ -8,12 +8,11 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Button
-import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.toast
+import com.example.kotlinlearn.interfacepac.KotlinInterfaceA
+import com.example.kotlinlearn.interfacepac.KotlinInterfaceB
 
-val Pii=3.13
+val Pii = 3.13
+
 class MainActivity : AppCompatActivity() {
     //    var int = 4
 //    var intVar :Int?=4
@@ -21,9 +20,11 @@ class MainActivity : AppCompatActivity() {
 //    var buttn2 :Button= Button(this)
 //    var double = 0.4
 //    val outVar : Int=4
-    val string: String? =null//todo Kotlin成员变量初始化的时候
-  //     get() = ""
-     //  set(value) =
+
+    val string: String? = null//todo Kotlin成员变量初始化的时候
+
+    //     get() = ""
+    //  set(value) =
     @TargetApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -88,24 +89,53 @@ class MainActivity : AppCompatActivity() {
 //            Log.d(TAG, "" + index)
 //        }
 //
-       val mutableList1= mutableListOf<String>("E","F","G","H")
-        mutableList1.add("I")
-        mutableList1.removeAt(0)
-        for(index in mutableList1.indices){//for循环遍历 MutableList集合
-            Log.d(TAG, "" + index)
-        }
+//       val mutableList1= mutableListOf<String>("E","F","G","H")
+//        mutableList1.add("I")
+//        mutableList1.removeAt(0)
+//        for(index in mutableList1.indices){//for循环遍历 MutableList集合
+//            Log.d(TAG, "" + index)
+//        }
+//
+//        //==Kotlin map集合的定义和遍历==
+//        val map1 = mapOf<Int, String>(1 to "d", 4 to "5")
+//        val map2 = mapOf(1 to "d", 4 to "5")
+//        val mutableMap1 = mutableMapOf<Int, String>(1 to "d", 4 to "5")
+//        val mutableMap2 = mutableMapOf(1 to "d", 4 to "5")
+//        map1.forEach { key, value ->
+//            Log.d(TAG, "key" + key + " value=" + value)
+//        }
 
-        //==Kotlin map集合的定义和遍历==
-        val map1 = mapOf<Int, String>(1 to "d", 4 to "5")
-        val map2 = mapOf(1 to "d", 4 to "5")
-        val mutableMap1 = mutableMapOf<Int, String>(1 to "d", 4 to "5")
-        val mutableMap2 = mutableMapOf(1 to "d", 4 to "5")
-        map1.forEach { key, value ->
-            Log.d(TAG, "key" + key + " value=" + value)
-        }
+//        val intarray = intArrayOf()//基本数据类型实例化
+//        val floatArray = floatArrayOf(1f, 2f)//其他byte和double同理
+//        val arrayTest1 = arrayOf(1.3f, 4,"tt")//可以填不同的数据类型
+//        val arrayTest2= arrayOfNulls<Int>(2)//声明一个长度为2的空数组
+//       // val arrayTest3=Array<Int>(1,test())//第二个参数传的类型没看懂
+//      //  intarray.any(1)
+//        typealias ->
+//        for (index in arrayTest1) {
+//            Log.d(TAG, "index" + index)
+//        }
+
+
+        //====Kotlin接口==
+
+
 
     }
 
+     class InterfaceChild : KotlinInterfaceA,KotlinInterfaceB{
+         override val testInt: Int
+             get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+
+         override fun testMethod() {
+         }
+
+     }
+
+
+     fun test():Int{
+         return 1
+     }
 
     /**
      * 定义内部类继承自BroadcastReceiver
