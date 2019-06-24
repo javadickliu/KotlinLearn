@@ -8,6 +8,8 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.webkit.WebView
+import com.example.kotlinlearn.bean.KotlinBean
 import com.example.kotlinlearn.interfacepac.KotlinInterfaceA
 import com.example.kotlinlearn.interfacepac.KotlinInterfaceB
 
@@ -117,25 +119,24 @@ class MainActivity : AppCompatActivity() {
 //        }
 
 
-        //====Kotlin接口==
+        //====Kotlin数据类==
+       val kotlinBean= KotlinBean("liudongxun", 12)
+        Log.d(TAG, "数据" + kotlinBean.toString())
+    }
 
+    class InterfaceChild : KotlinInterfaceA, KotlinInterfaceB {
+        override val testInt: Int
+            get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
 
+        override fun testMethod() {
+        }
 
     }
 
-     class InterfaceChild : KotlinInterfaceA,KotlinInterfaceB{
-         override val testInt: Int
-             get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
 
-         override fun testMethod() {
-         }
-
-     }
-
-
-     fun test():Int{
-         return 1
-     }
+    fun test(): Int {
+        return 1
+    }
 
     /**
      * 定义内部类继承自BroadcastReceiver
