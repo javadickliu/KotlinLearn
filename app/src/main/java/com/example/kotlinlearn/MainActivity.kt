@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.util.Log
 import android.webkit.WebView
 import com.example.kotlinlearn.bean.KotlinBean
+import com.example.kotlinlearn.classtest.KotlinClass
 import com.example.kotlinlearn.interfacepac.KotlinInterfaceA
 import com.example.kotlinlearn.interfacepac.KotlinInterfaceB
 
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         //==Kotlin类型检查
         //  typeCheck(5)
 
-
+          KotlinClass("1",4)
         //==Kotlin匿名内部类====
 //        mainactivity_btn.setOnClickListener(object :View.OnClickListener{
 //            override fun onClick(p0: View?) {
