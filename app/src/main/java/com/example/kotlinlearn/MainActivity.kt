@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         //==Kotlin类型检查
         //  typeCheck(5)
 
-          KotlinClass("1",4)
+        //     KotlinClass("1",4)
         //==Kotlin匿名内部类====
 //        mainactivity_btn.setOnClickListener(object :View.OnClickListener{
 //            override fun onClick(p0: View?) {
@@ -120,9 +120,21 @@ class MainActivity : AppCompatActivity() {
 //        }
 
 
-        //====Kotlin数据类==
-       val kotlinBean= KotlinBean("liudongxun", 12)
-        Log.d(TAG, "数据" + kotlinBean.toString())
+//        //====Kotlin数据类== )
+       val result= KotlinBean("liudongxun", 25).apply {
+           this.name="11"
+           toString()
+        }
+        Log.d(TAG, "result=" + result)
+
+//
+//        KotlinBean("liudongxun",25).apply {
+//            this.name="liudongxun1"
+//            this.age=29
+////            name="liudongxun1"
+////            age=29
+//            Log.d(TAG, "nameA="+this.name+" age="+this.age)
+//        }
     }
 
     class InterfaceChild : KotlinInterfaceA, KotlinInterfaceB {
