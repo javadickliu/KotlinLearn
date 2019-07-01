@@ -22,8 +22,11 @@ class MainActivity : AppCompatActivity() {
 //    var buttn1 :Button?=null
 //    var buttn2 :Button= Button(this)
 //    var double = 0.4
-//    val outVar : Int=4
-
+    var outVar : Int = 0
+        get() = 6
+     set(value){
+         field=value
+     }
     val string: String? = null//todo Kotlin成员变量初始化的时候
 
     //     get() = ""
