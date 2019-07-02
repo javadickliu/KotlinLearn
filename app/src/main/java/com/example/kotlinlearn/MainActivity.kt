@@ -9,25 +9,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.webkit.WebView
+import android.widget.Button
 import com.example.kotlinlearn.bean.KotlinBean
 import com.example.kotlinlearn.classtest.KotlinClass
 import com.example.kotlinlearn.interfacepac.KotlinInterfaceA
 import com.example.kotlinlearn.interfacepac.KotlinInterfaceB
 
-val Pii = 3.13
+const val Pii = 3.13
 
 class MainActivity : AppCompatActivity() {
     //    var int = 4
 //    var intVar :Int?=4
 //    var buttn1 :Button?=null
 //    var buttn2 :Button= Button(this)
-//    var double = 0.4
-    var outVar : Int = 0
-        get() = 6
-     set(value){
-         field=value
-     }
-    val string: String? = null//todo Kotlin成员变量初始化的时候
+ //   const var double = 0.4
+//    val outVar : Int = 0
+//        get() = 6
+//     set(value){
+//         field=value
+//     }
+//    val string: String? = null//todo Kotlin成员变量初始化的时候
 
     //     get() = ""
     //  set(value) =
@@ -124,11 +125,11 @@ class MainActivity : AppCompatActivity() {
 
 
 //        //====Kotlin数据类== )
-       val result= KotlinBean("liudongxun", 25).apply {
-           this.name="11"
-           toString()
-        }
-        Log.d(TAG, "result=" + result)
+//       val result= KotlinBean("liudongxun", 25).apply {
+//           this.name="11"
+//           toString()
+//        }
+//        Log.d(TAG, "result=" + result)
 
 //
 //        KotlinBean("liudongxun",25).apply {
@@ -138,6 +139,13 @@ class MainActivity : AppCompatActivity() {
 ////            age=29
 //            Log.d(TAG, "nameA="+this.name+" age="+this.age)
 //        }
+        SingleClass.TAG
+        val intArray= intArrayOf(1,4,5)
+        varargMethod(1,2,*intArray)
+    }
+
+    fun varargMethod(vararg int:Int){
+
     }
 
     class InterfaceChild : KotlinInterfaceA, KotlinInterfaceB {
@@ -249,9 +257,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
+    object SingleClass{
+        public const val TAG = "MainActivity"
+    }
     companion object {
-        private val TAG = "MainActivity"
+        private const val TAG = "MainActivity"
     }
 }
 
