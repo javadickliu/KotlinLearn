@@ -20,7 +20,7 @@ const val Pii = 3.13
 class MainActivity : AppCompatActivity() {
     //    var int = 4
 //    var intVar :Int?=4
-//    var buttn1 :Button?=null
+    var buttn1 :Button?=null
 //    var buttn2 :Button= Button(this)
  //   const var double = 0.4
 //    val outVar : Int = 0
@@ -139,9 +139,11 @@ class MainActivity : AppCompatActivity() {
 ////            age=29
 //            Log.d(TAG, "nameA="+this.name+" age="+this.age)
 //        }
-        SingleClass.TAG
-        val intArray= intArrayOf(1,4,5)
-        varargMethod(1,2,*intArray)
+//        SingleClass.TAG
+//        val intArray= intArrayOf(1,4,5)
+//        varargMethod(1,2,*intArray)
+
+     //   buttn1.
     }
 
     fun varargMethod(vararg int:Int){
