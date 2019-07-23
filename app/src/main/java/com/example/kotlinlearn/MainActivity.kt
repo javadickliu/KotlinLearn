@@ -8,12 +8,15 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.webkit.WebView
 import android.widget.Button
+import android.widget.CheckBox
 import com.example.kotlinlearn.bean.KotlinBean
 import com.example.kotlinlearn.classtest.KotlinClass
 import com.example.kotlinlearn.interfacepac.KotlinInterfaceA
 import com.example.kotlinlearn.interfacepac.KotlinInterfaceB
+import kotlinx.android.synthetic.main.activity_main.*
 
 const val Pii = 3.13
 
@@ -144,7 +147,35 @@ class MainActivity : AppCompatActivity() {
 //        varargMethod(1,2,*intArray)
 
      //   buttn1.
+
+
+
+//        //========Lambda表达式=========
+//        mainactivity_btn.setOnClickListener(object : View.OnClickListener{
+//            override fun onClick(p0: View?) {
+//
+//            }
+//
+//        })
+//        mainactivity_btn.setOnClickListener {
+//
+//        }
+//     test()
+
+
+        //===============
+        val list=listOf<Button>()
+
     }
+    val test={
+     Log.d("11111","dd")
+        if(true){
+
+        }else{
+
+        }
+    }//什么意思?
+
 
     fun varargMethod(vararg int:Int){
 
@@ -160,9 +191,9 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun test(): Int {
-        return 1
-    }
+//    fun test(): Int {
+//        return 1
+//    }
 
     /**
      * 定义内部类继承自BroadcastReceiver
